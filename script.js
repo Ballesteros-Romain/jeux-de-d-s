@@ -21,10 +21,10 @@ function Ngame() {
   countp2.textContent = 0;
   numberp1.textContent = 0;
   numberp2.textContent = 0;
-  joueur1.classList.remove("selected");
+  joueur1.classList.add("selected");
   joueur2.classList.remove("selected");
-  joueur1.style.color = "black";
-  joueur2.style.color = "black";
+  name1.style.color = "rgb(236, 118, 118)";
+  name2.style.color = "black";
 }
 
 newGame.addEventListener("click", Ngame);
