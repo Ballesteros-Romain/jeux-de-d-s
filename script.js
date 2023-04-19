@@ -94,7 +94,7 @@ function stock() {
     name1.style.color = "rgb(236, 118, 118)";
     name2.style.color = "black";
   }
-  if (countHold === 100) {
+  if (countHold >= 100) {
     alert("Bravo vous avez gagné");
   }
 }
