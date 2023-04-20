@@ -78,6 +78,8 @@ function roll() {
   }
   if (diceValue === 1) {
     alert("Vous avez fait 1 : Passez votre tour");
+    numberp1.textContent = 0;
+    numberp2.textContent = 0;
   }
 }
 // Function de stockage du resultat
@@ -108,8 +110,10 @@ function stock() {
     numberp2.textContent = 0;
     numberp1.textContent = 0;
   }
-  if (countHold >= 100) {
-    alert("Bravo vous avez gagné");
+  if (joueur2.classList.contains("selected") && countHold >= 100) {
+    alert("Bravo vous avez gagné Player 1 ");
+  } else if (joueur1.classList.contains("selected") && countHold >= 100) {
+    alert("Bravo vous avez gagné Player 2 ");
   }
 }
 
