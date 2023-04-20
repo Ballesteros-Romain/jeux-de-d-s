@@ -9,6 +9,7 @@ const name2 = document.querySelector("#joueur2");
 const dice = document.querySelector(".dice");
 let rollDice = document.querySelector(".rollDice");
 let hold = document.querySelector(".hold");
+const svg = document.querySelector(".dice>svg");
 const joueur1 = document.querySelector("#joueur1");
 const joueur2 = document.querySelector("#joueur2");
 const joueurs = {
@@ -44,9 +45,18 @@ function selectPlayer(event) {
     name2.style.color = "rgb(236, 118, 118)";
   }
 }
-
+function vibrateDice() {
+  dice.style.transform = "rotate(1deg)";
+  setTimeout(() => {
+    dice.style.transform = "rotate(-2deg)";
+  }, 100);
+  setTimeout(() => {
+    dice.style.transform = "rotate(0deg)";
+  }, 200);
+}
 // Function de lancer de dés et affichage du resultat
-rollDice.addEventListener("click", roll);
+dice.addEventListener("click", roll);
+dice.addEventListener("click", vibrateDice);
 function roll() {
   let diceValue = Math.floor(Math.random() * 6) + 1;
   if (joueur1.classList.contains("selected")) {
