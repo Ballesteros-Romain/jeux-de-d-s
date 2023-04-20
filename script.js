@@ -67,7 +67,7 @@ function roll() {
     }
   }
   if (diceValue === 1) {
-    alert("Vous avez fait 1 : Game Over");
+    alert("Vous avez fait 1 : Passez votre tour");
   }
 }
 // Function de stockage du resultat
@@ -84,6 +84,8 @@ function stock() {
     joueur2.classList.add("selected");
     name1.style.color = "black";
     name2.style.color = "rgb(236, 118, 118)";
+    numberp1.textContent = 0;
+    numberp2.textContent = 0;
   } else if (joueur2.classList.contains("selected")) {
     diceValue = parseInt(numberp2.textContent);
     countHold = parseInt(countp2.textContent);
@@ -93,6 +95,8 @@ function stock() {
     joueur2.classList.remove("selected");
     name1.style.color = "rgb(236, 118, 118)";
     name2.style.color = "black";
+    numberp2.textContent = 0;
+    numberp1.textContent = 0;
   }
   if (countHold >= 100) {
     alert("Bravo vous avez gagné");
