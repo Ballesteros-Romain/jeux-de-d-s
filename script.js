@@ -58,7 +58,7 @@ function vibrateDice() {
 dice.addEventListener("click", roll);
 dice.addEventListener("click", vibrateDice);
 function roll() {
-  let diceValue = Math.floor(Math.random() * 6) + 1;
+  diceValue = Math.floor(Math.random() * 6) + 1;
   if (joueur1.classList.contains("selected")) {
     numberp1.textContent = diceValue;
     if (diceValue === 1) {
@@ -111,9 +111,9 @@ function stock() {
     numberp1.textContent = 0;
   }
   if (joueur2.classList.contains("selected") && countHold >= 100) {
-    alert("Bravo vous avez gagné Player 1 ");
-  } else if (joueur1.classList.contains("selected") && countHold >= 100) {
     alert("Bravo vous avez gagné Player 2 ");
+  } else if (joueur1.classList.contains("selected") && countHold >= 100) {
+    alert("Bravo vous avez gagné Player 1 ");
   }
 }
 
