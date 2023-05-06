@@ -111,9 +111,9 @@ function stock() {
     numberp1.textContent = 0;
   }
   if (joueur2.classList.contains("selected") && countHold >= 100) {
-    alert("Bravo vous avez gagné Player 2 ");
-  } else if (joueur1.classList.contains("selected") && countHold >= 100) {
     alert("Bravo vous avez gagné Player 1 ");
+  } else if (joueur1.classList.contains("selected") && countHold >= 100) {
+    alert("Bravo vous avez gagné Player 2 ");
   }
 }
 
